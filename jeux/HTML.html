@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu du nombre mystère</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu du nombre mystère</h1>
+        <p>Devine le nombre entre 1 et 100.</p>
+
+        <form method="POST">
+            <input type="number" name="proposition" placeholder="Ta proposition" required>
+            <button type="submit">Valider</button>
+        </form>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
